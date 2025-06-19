@@ -2,7 +2,7 @@
  * Document management service for the collaboration server
  */
 
-import { EventEmitter, Operation, DocumentId, ClientId, Version } from '@thesaasdevkit/core';
+import { EventEmitter, Operation, DocumentId, ClientId, Version } from '@thesaasdevkit/rtc-core';
 import { DocumentState, PersistenceAdapter } from '../types/server-types.js';
 
 /**

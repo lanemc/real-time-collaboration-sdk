@@ -2,7 +2,7 @@
  * Type definitions for the web client SDK
  */
 
-import { Operation, DocumentId, ClientId, Version } from '@thesaasdevkit/core';
+import { Operation, DocumentId, ClientId, Version } from '@thesaasdevkit/rtc-core';
 
 /**
  * Configuration options for the collaboration client

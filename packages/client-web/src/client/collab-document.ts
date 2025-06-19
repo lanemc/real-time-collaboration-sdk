@@ -14,7 +14,7 @@ import {
   transformTextOperation,
   transformListOperation,
   transformMapOperation,
-} from '@thesaasdevkit/core';
+} from '@thesaasdevkit/rtc-core';
 import { DocumentSchema, UserPresence } from '../types.js';
 
 /**

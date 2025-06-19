@@ -12,7 +12,7 @@ import {
   SharedList,
   SharedMap,
   generateId 
-} from '@thesaasdevkit/core';
+} from '@thesaasdevkit/rtc-core';
 import { WebSocketTransport } from '../transports/websocket-transport.js';
 import { 
   CollabClientConfig,

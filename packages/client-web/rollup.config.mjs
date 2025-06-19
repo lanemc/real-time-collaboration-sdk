@@ -19,5 +19,5 @@ export default {
       tsconfig: './tsconfig.json',
     }),
   ],
-  external: ['@thesaasdevkit/core'],
+  external: ['@thesaasdevkit/rtc-core'],
 };

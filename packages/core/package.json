@@ -1,6 +1,6 @@
 {
-  "name": "@thesaasdevkit/core",
-  "version": "0.1.5",
+  "name": "@thesaasdevkit/rtc-core",
+  "version": "0.1.6",
   "description": "Core operational transform algorithms and shared data types for RTCC",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",

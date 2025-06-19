@@ -1,6 +1,6 @@
 {
-  "name": "@thesaasdevkit/client-web",
-  "version": "0.1.5",
+  "name": "@thesaasdevkit/rtc-client-web",
+  "version": "0.1.6",
   "description": "Web client SDK for real-time collaboration",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -23,7 +23,7 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@thesaasdevkit/core": "^0.1.5"
+    "@thesaasdevkit/rtc-core": "^0.1.6"
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "^11.0.0",

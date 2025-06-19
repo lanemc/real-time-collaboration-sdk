@@ -1,6 +1,6 @@
 {
   "name": "@thesaasdevkit/examples",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Example applications using Real-Time Collaboration Core",
   "private": true,
   "type": "module",
@@ -11,9 +11,9 @@
     "start:server": "node ../server/dist/cli.js --port 3001 --log-level debug"
   },
   "dependencies": {
-    "@thesaasdevkit/core": "^0.1.5",
-    "@thesaasdevkit/client-web": "^0.1.5",
-    "@thesaasdevkit/server": "^0.1.5"
+    "@thesaasdevkit/rtc-core": "^0.1.6",
+    "@thesaasdevkit/rtc-client-web": "^0.1.6",
+    "@thesaasdevkit/rtc-server": "^0.1.6"
   },
   "devDependencies": {
     "vite": "^5.0.0",

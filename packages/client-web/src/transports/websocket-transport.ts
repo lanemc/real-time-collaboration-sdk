@@ -2,7 +2,7 @@
  * WebSocket transport implementation for real-time communication
  */
 
-import { EventEmitter } from '@thesaasdevkit/core';
+import { EventEmitter } from '@thesaasdevkit/rtc-core';
 import { Message, ConnectionState } from '../types.js';
 
 /**

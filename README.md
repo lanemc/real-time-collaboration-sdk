@@ -4,7 +4,26 @@
 
 A developer-first SDK that brings Google Docs-style real-time collaboration to your web and mobile apps. Built on battle-tested Operational Transformation algorithms, but designed to feel as simple as working with local state.
 
-[![npm](https://img.shields.io/npm/v/@thesaasdevkit/core)](https://npmjs.com/package/@thesaasdevkit/core) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue.svg)](https://www.typescriptlang.org/)
+[![npm](https://img.shields.io/npm/v/@thesaasdevkit/rtc-core)](https://npmjs.com/package/@thesaasdevkit/rtc-core) [![npm](https://img.shields.io/npm/v/@thesaasdevkit/rtc-client-web)](https://npmjs.com/package/@thesaasdevkit/rtc-client-web) [![npm](https://img.shields.io/npm/v/@thesaasdevkit/rtc-server)](https://npmjs.com/package/@thesaasdevkit/rtc-server) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue.svg)](https://www.typescriptlang.org/)
+
+## 🎉 **What's New - Latest Updates**
+
+### **✨ Fresh Release - Version 0.1.6**
+We've just shipped some amazing improvements:
+
+- **🏷️ Clear Package Names**: All packages now have descriptive `rtc-` prefixes for better discoverability
+  - `@thesaasdevkit/rtc-core` - Core operational transform algorithms
+  - `@thesaasdevkit/rtc-client-web` - Web client SDK
+  - `@thesaasdevkit/rtc-server` - Collaboration server
+  - `@thesaasdevkit/rtc-react-hooks` - React integration hooks
+
+- **🚀 Published on npm**: All packages are now live on npm under the [`@thesaasdevkit` organization](https://www.npmjs.com/settings/thesaasdevkit/packages)
+
+- **🔧 Streamlined CI/CD**: Automated publishing pipeline with GitHub Actions ensures reliable releases
+
+- **📦 Better Dependencies**: All inter-package dependencies are properly aligned and versioned
+
+**Ready to try the latest?** All the examples below use the new package names!
 
 ---
 
@@ -12,12 +31,12 @@ A developer-first SDK that brings Google Docs-style real-time collaboration to y
 
 ### 1. Start the collaboration server
 ```bash
-npx @thesaasdevkit/server --port 3001
+npx @thesaasdevkit/rtc-server --port 3001
 ```
 
 ### 2. Add real-time collaboration to your app
 ```typescript
-import { CollabClient, SharedText } from '@thesaasdevkit/client-web';
+import { CollabClient, SharedText } from '@thesaasdevkit/rtc-client-web';
 
 // Connect to collaboration server
 const client = new CollabClient({
@@ -88,7 +107,7 @@ sharedText.insert(position, text); // ✨ Auto-syncs everywhere
 
 ### **React Integration** ⚛️
 ```tsx
-import { useSharedDocument } from '@thesaasdevkit/react-hooks';
+import { useSharedDocument } from '@thesaasdevkit/rtc-react-hooks';
 
 function CollaborativeEditor({ documentId }) {
   const { document, isLoading, error } = useSharedDocument(documentId);
@@ -126,7 +145,7 @@ function CollaborativeEditor({ documentId }) {
 
 <script setup>
 import { ref, onMounted } from 'vue';
-import { CollabClient } from '@thesaasdevkit/client-web';
+import { CollabClient } from '@thesaasdevkit/rtc-client-web';
 
 const documentText = ref('');
 const onlineUsers = ref([]);
@@ -301,7 +320,7 @@ doc.on('userLeft', (user) => showNotification(`${user.name} left`));
 
 ### **Collaborative Todo App** ✅
 ```typescript
-import { CollabClient } from '@thesaasdevkit/client-web';
+import { CollabClient } from '@thesaasdevkit/rtc-client-web';
 
 class TodoApp {
   async init() {
@@ -360,7 +379,7 @@ class TodoApp {
 
 ### **Real-time Code Editor** 💻
 ```typescript
-import { CollabClient } from '@thesaasdevkit/client-web';
+import { CollabClient } from '@thesaasdevkit/rtc-client-web';
 import { EditorView, basicSetup } from 'codemirror';
 
 class CollaborativeCodeEditor {
@@ -498,8 +517,8 @@ const server = new CollaborationServer({
 
 ### **Data Persistence** 💾
 ```typescript
-import { CollaborationServer } from '@thesaasdevkit/server';
-import { PostgresPersistenceAdapter } from '@thesaasdevkit/persistence-postgres';
+import { CollaborationServer } from '@thesaasdevkit/rtc-server';
+import { PostgresPersistenceAdapter } from '@thesaasdevkit/rtc-persistence-postgres';
 
 const server = new CollaborationServer({
   port: 3001,
@@ -522,27 +541,27 @@ const server = new CollaborationServer({
 
 ### **Client SDK**
 ```bash
-npm install @thesaasdevkit/client-web @thesaasdevkit/core
+npm install @thesaasdevkit/rtc-client-web @thesaasdevkit/rtc-core
 ```
 
 ### **React Integration**
 ```bash
-npm install @thesaasdevkit/react-hooks
+npm install @thesaasdevkit/rtc-react-hooks
 ```
 
 ### **Server** 
 ```bash
-npm install @thesaasdevkit/server
+npm install @thesaasdevkit/rtc-server
 ```
 
 ### **Quick Server Start**
 ```bash
 # Global installation for quick testing
-npm install -g @thesaasdevkit/server
+npm install -g @thesaasdevkit/rtc-server
 rtcc-server --port 3001
 
 # Or run directly with npx
-npx @thesaasdevkit/server --port 3001
+npx @thesaasdevkit/rtc-server --port 3001
 ```
 
 ---
@@ -553,7 +572,7 @@ Experience real-time collaboration in your browser:
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/yourusername/real-time-collaboration-sdk.git
+git clone https://github.com/lanemc/real-time-collaboration-sdk.git
 cd real-time-collaboration-sdk
 
 # 2. Install dependencies
@@ -607,7 +626,7 @@ We'd love your help making RTCC even better! Here's how to get involved:
 ### **Code Contributions** 🛠️
 ```bash
 # Fork and clone the repo
-git clone https://github.com/yourusername/real-time-collaboration-sdk.git
+git clone https://github.com/lanemc/real-time-collaboration-sdk.git
 
 # Create a feature branch
 git checkout -b feature/amazing-new-feature
@@ -632,7 +651,7 @@ npm test
 
 - 📚 **Documentation**: [rtcc-docs.com](https://rtcc-docs.com) *(coming soon)*
 - 💬 **Discord**: [Join our community](https://discord.gg/rtcc) *(coming soon)*
-- 🐛 **Issues**: [GitHub Issues](https://github.com/yourusername/real-time-collaboration-sdk/issues)
+- 🐛 **Issues**: [GitHub Issues](https://github.com/lanemc/real-time-collaboration-sdk/issues)
 - 📧 **Email**: support@thesaasdevkit.dev *(coming soon)*
 
 ---
@@ -649,6 +668,6 @@ MIT License - use it in your commercial projects, open source projects, wherever
 
 *Real-time collaboration shouldn't be rocket science.*
 
-[⭐ Star on GitHub](https://github.com/yourusername/real-time-collaboration-sdk) • [📖 Read the Docs](https://rtcc-docs.com) • [🚀 Try the Demo](https://demo.rtcc.dev)
+[⭐ Star on GitHub](https://github.com/lanemc/real-time-collaboration-sdk) • [📖 Read the Docs](https://rtcc-docs.com) • [🚀 Try the Demo](https://demo.rtcc.dev)
 
 </div>

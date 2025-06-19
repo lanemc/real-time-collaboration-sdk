@@ -12,9 +12,9 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@thesaasdevkit/core': resolve(__dirname, '../core/src'),
-      '@thesaasdevkit/client-web': resolve(__dirname, '../client-web/src'),
-      '@thesaasdevkit/server': resolve(__dirname, '../server/src'),
+      '@thesaasdevkit/rtc-core': resolve(__dirname, '../core/src'),
+      '@thesaasdevkit/rtc-client-web': resolve(__dirname, '../client-web/src'),
+      '@thesaasdevkit/rtc-server': resolve(__dirname, '../server/src'),
     },
   },
 });

@@ -2,7 +2,7 @@
  * Authentication service for the collaboration server
  */
 
-import { EventEmitter, ClientId } from '@thesaasdevkit/core';
+import { EventEmitter, ClientId } from '@thesaasdevkit/rtc-core';
 import { ClientInfo } from '../types/server-types.js';
 
 /**

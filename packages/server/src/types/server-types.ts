@@ -3,7 +3,7 @@
  */
 
 import { WebSocket } from 'ws';
-import { Operation, DocumentId, ClientId, Version } from '@thesaasdevkit/core';
+import { Operation, DocumentId, ClientId, Version } from '@thesaasdevkit/rtc-core';
 
 /**
  * Server configuration options

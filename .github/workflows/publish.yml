@@ -28,16 +28,16 @@ jobs:
       - name: Build packages
         run: |
           # Build packages in dependency order
-          echo "Building @thesaasdevkit/core..."
+          echo "Building @thesaasdevkit/rtc-core..."
           cd packages/core && npm run build
           
-          echo "Building @thesaasdevkit/client-web..."
+          echo "Building @thesaasdevkit/rtc-client-web..."
           cd ../client-web && npm run build
           
-          echo "Building @thesaasdevkit/server..."
+          echo "Building @thesaasdevkit/rtc-server..."
           cd ../server && npm run build
           
-          echo "Building @thesaasdevkit/react-hooks..."
+          echo "Building @thesaasdevkit/rtc-react-hooks..."
           cd ../react-hooks && npm run build
         
       - name: Publish to NPM
@@ -45,16 +45,16 @@ jobs:
           set -e
           
           # Publish packages in dependency order
-          echo "Publishing @thesaasdevkit/core..."
+          echo "Publishing @thesaasdevkit/rtc-core..."
           cd $GITHUB_WORKSPACE/packages/core && npm publish --access public
           
-          echo "Publishing @thesaasdevkit/client-web..."
+          echo "Publishing @thesaasdevkit/rtc-client-web..."
           cd $GITHUB_WORKSPACE/packages/client-web && npm publish --access public
           
-          echo "Publishing @thesaasdevkit/server..."
+          echo "Publishing @thesaasdevkit/rtc-server..."
           cd $GITHUB_WORKSPACE/packages/server && npm publish --access public
           
-          echo "Publishing @thesaasdevkit/react-hooks..."
+          echo "Publishing @thesaasdevkit/rtc-react-hooks..."
           cd $GITHUB_WORKSPACE/packages/react-hooks && npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN_SAAS_DEV_KIT }}

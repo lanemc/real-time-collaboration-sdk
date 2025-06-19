@@ -22,7 +22,7 @@ export {
   DocumentId,
   ClientId,
   Version,
-} from '@thesaasdevkit/core';
+} from '@thesaasdevkit/rtc-core';
 
 // Version information
 export const VERSION = '0.1.0';
