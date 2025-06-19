@@ -16,7 +16,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsc && rollup -c",
+    "build": "tsc && rollup -c rollup.config.mjs",
     "dev": "tsc --watch",
     "test": "vitest",
     "lint": "eslint src --ext .ts,.tsx",
