@@ -54,10 +54,22 @@ jobs:
         
       - name: Publish to NPM
         run: |
+          set -e
+          
           # Configure npm to use the token
           echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
           
-          # Publish all packages that aren't private
-          npm publish --workspaces --access public
+          # Publish packages in dependency order
+          echo "Publishing @rtcc/core..."
+          cd $GITHUB_WORKSPACE/packages/core && npm publish --access public
+          
+          echo "Publishing @rtcc/client-web..."
+          cd $GITHUB_WORKSPACE/packages/client-web && npm publish --access public
+          
+          echo "Publishing @rtcc/server..."
+          cd $GITHUB_WORKSPACE/packages/server && npm publish --access public
+          
+          echo "Publishing @rtcc/react-hooks..."
+          cd $GITHUB_WORKSPACE/packages/react-hooks && npm publish --access public
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN_SAAS_DEV_KIT }}
