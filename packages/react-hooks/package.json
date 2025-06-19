@@ -23,8 +23,8 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@rtcc/core": "workspace:*",
-    "@rtcc/client-web": "workspace:*"
+    "@rtcc/core": "^0.1.0",
+    "@rtcc/client-web": "^0.1.0"
   },
   "peerDependencies": {
     "react": ">=16.8.0",
