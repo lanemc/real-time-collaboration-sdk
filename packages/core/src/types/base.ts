@@ -126,6 +126,9 @@ export interface SharedTypeEvents<S> {
   
   /** Emitted when operations are transformed */
   transform: (original: Operation, transformed: Operation) => void;
+  
+  /** Allow additional event types */
+  [key: string]: (...args: any[]) => void;
 }
 
 /**
