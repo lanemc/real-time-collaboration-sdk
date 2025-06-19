@@ -1,6 +1,6 @@
 {
   "name": "@lanemc/server",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Real-time collaboration server for coordinating operational transforms",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

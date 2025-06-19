@@ -26,16 +26,16 @@ jobs:
       - name: Build packages
         run: |
           # Build packages in dependency order
-          echo "Building @rtc-sdk/core..."
+          echo "Building @lanemc/core..."
           cd packages/core && npm run build
           
-          echo "Building @rtc-sdk/client-web..."
+          echo "Building @lanemc/client-web..."
           cd ../client-web && npm run build
           
-          echo "Building @rtc-sdk/server..."
+          echo "Building @lanemc/server..."
           cd ../server && npm run build
           
-          echo "Building @rtc-sdk/react-hooks..."
+          echo "Building @lanemc/react-hooks..."
           cd ../react-hooks && npm run build
         
       - name: Publish to NPM
@@ -43,16 +43,16 @@ jobs:
           set -e
           
           # Publish packages in dependency order
-          echo "Publishing @rtc-sdk/core..."
+          echo "Publishing @lanemc/core..."
           cd $GITHUB_WORKSPACE/packages/core && npm publish --access public
           
-          echo "Publishing @rtc-sdk/client-web..."
+          echo "Publishing @lanemc/client-web..."
           cd $GITHUB_WORKSPACE/packages/client-web && npm publish --access public
           
-          echo "Publishing @rtc-sdk/server..."
+          echo "Publishing @lanemc/server..."
           cd $GITHUB_WORKSPACE/packages/server && npm publish --access public
           
-          echo "Publishing @rtc-sdk/react-hooks..."
+          echo "Publishing @lanemc/react-hooks..."
           cd $GITHUB_WORKSPACE/packages/react-hooks && npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN_SAAS_DEV_KIT }}
