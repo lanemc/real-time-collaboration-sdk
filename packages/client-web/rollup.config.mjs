@@ -19,5 +19,5 @@ export default {
       tsconfig: './tsconfig.json',
     }),
   ],
-  external: ['@rtc-sdk/core'],
+  external: ['@lanemc/core'],
 };

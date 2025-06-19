@@ -2,7 +2,7 @@
  * Client management service for the collaboration server
  */
 
-import { EventEmitter, ClientId, DocumentId } from '@rtc-sdk/core';
+import { EventEmitter, ClientId, DocumentId } from '@lanemc/core';
 import { ConnectedClient, UserPresence } from '../types/server-types.js';
 
 /**

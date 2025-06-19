@@ -1,5 +1,5 @@
 {
-  "name": "@rtc-sdk/examples",
+  "name": "@lanemc/examples",
   "version": "0.1.2",
   "description": "Example applications using Real-Time Collaboration Core",
   "private": true,
@@ -11,9 +11,9 @@
     "start:server": "node ../server/dist/cli.js --port 3001 --log-level debug"
   },
   "dependencies": {
-    "@rtc-sdk/core": "^0.1.2",
-    "@rtc-sdk/client-web": "^0.1.2",
-    "@rtc-sdk/server": "^0.1.2"
+    "@lanemc/core": "^0.1.2",
+    "@lanemc/client-web": "^0.1.2",
+    "@lanemc/server": "^0.1.2"
   },
   "devDependencies": {
     "vite": "^5.0.0",

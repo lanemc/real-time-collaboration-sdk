@@ -202,7 +202,7 @@ This section enumerates specific technical requirements and design decisions for
 
 - **Compatibility:** Should work in all modern browsers (via WebSocket). Also should work in Node.js environments (so developers could use it in Electron apps or server-side node if needed).
 
-- **Packaging:** Provide as an npm package (`@rtcc/core` perhaps), which can be imported into React, Vue, Angular, etc. The core should have no dependencies on specific frameworks (framework-specific bindings can be separate add-ons).
+- **Packaging:** Provide as an npm package (`@lanemc/core` perhaps), which can be imported into React, Vue, Angular, etc. The core should have no dependencies on specific frameworks (framework-specific bindings can be separate add-ons).
 
 - **Core Classes:** likely classes like `CollabClient`, `SharedDocument` (generic), and specific data type classes or methods to manipulate them. Also possibly `CollabPresence` for presence data.
 
@@ -211,7 +211,7 @@ This section enumerates specific technical requirements and design decisions for
 - **Example API usage (Web):**
 
   ```js
-  import { CollabClient } from "@rtcc/core";
+  import { CollabClient } from "@lanemc/core";
   const client = new CollabClient({
     serverUrl: "wss://collab.myapp.com",
     token: userToken,

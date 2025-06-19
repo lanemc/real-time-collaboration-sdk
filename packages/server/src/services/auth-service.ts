@@ -2,7 +2,7 @@
  * Authentication service for the collaboration server
  */
 
-import { EventEmitter, ClientId } from '@rtc-sdk/core';
+import { EventEmitter, ClientId } from '@lanemc/core';
 import { ClientInfo } from '../types/server-types.js';
 
 /**

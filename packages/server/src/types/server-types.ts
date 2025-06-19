@@ -3,7 +3,7 @@
  */
 
 import { WebSocket } from 'ws';
-import { Operation, DocumentId, ClientId, Version } from '@rtc-sdk/core';
+import { Operation, DocumentId, ClientId, Version } from '@lanemc/core';
 
 /**
  * Server configuration options

@@ -2,7 +2,7 @@
  * WebSocket transport implementation for real-time communication
  */
 
-import { EventEmitter } from '@rtc-sdk/core';
+import { EventEmitter } from '@lanemc/core';
 import { Message, ConnectionState } from '../types.js';
 
 /**

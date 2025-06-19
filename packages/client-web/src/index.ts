@@ -22,7 +22,7 @@ export {
   DocumentId,
   ClientId,
   Version,
-} from '@rtc-sdk/core';
+} from '@lanemc/core';
 
 // Version information
 export const VERSION = '0.1.0';

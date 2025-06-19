@@ -2,7 +2,7 @@
  * Type definitions for the web client SDK
  */
 
-import { Operation, DocumentId, ClientId, Version } from '@rtc-sdk/core';
+import { Operation, DocumentId, ClientId, Version } from '@lanemc/core';
 
 /**
  * Configuration options for the collaboration client

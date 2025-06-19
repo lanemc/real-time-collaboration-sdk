@@ -4,7 +4,7 @@
 
 A developer-first SDK that brings Google Docs-style real-time collaboration to your web and mobile apps. Built on battle-tested Operational Transformation algorithms, but designed to feel as simple as working with local state.
 
-[![npm](https://img.shields.io/npm/v/@rtcc/core)](https://npmjs.com/package/@rtcc/core) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue.svg)](https://www.typescriptlang.org/)
+[![npm](https://img.shields.io/npm/v/@lanemc/core)](https://npmjs.com/package/@lanemc/core) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue.svg)](https://www.typescriptlang.org/)
 
 ---
 
@@ -12,12 +12,12 @@ A developer-first SDK that brings Google Docs-style real-time collaboration to y
 
 ### 1. Start the collaboration server
 ```bash
-npx @rtcc/server --port 3001
+npx @lanemc/server --port 3001
 ```
 
 ### 2. Add real-time collaboration to your app
 ```typescript
-import { CollabClient, SharedText } from '@rtcc/client-web';
+import { CollabClient, SharedText } from '@lanemc/client-web';
 
 // Connect to collaboration server
 const client = new CollabClient({
@@ -88,7 +88,7 @@ sharedText.insert(position, text); // ✨ Auto-syncs everywhere
 
 ### **React Integration** ⚛️
 ```tsx
-import { useSharedDocument } from '@rtcc/react-hooks';
+import { useSharedDocument } from '@lanemc/react-hooks';
 
 function CollaborativeEditor({ documentId }) {
   const { document, isLoading, error } = useSharedDocument(documentId);
@@ -126,7 +126,7 @@ function CollaborativeEditor({ documentId }) {
 
 <script setup>
 import { ref, onMounted } from 'vue';
-import { CollabClient } from '@rtcc/client-web';
+import { CollabClient } from '@lanemc/client-web';
 
 const documentText = ref('');
 const onlineUsers = ref([]);
@@ -301,7 +301,7 @@ doc.on('userLeft', (user) => showNotification(`${user.name} left`));
 
 ### **Collaborative Todo App** ✅
 ```typescript
-import { CollabClient } from '@rtcc/client-web';
+import { CollabClient } from '@lanemc/client-web';
 
 class TodoApp {
   async init() {
@@ -360,7 +360,7 @@ class TodoApp {
 
 ### **Real-time Code Editor** 💻
 ```typescript
-import { CollabClient } from '@rtcc/client-web';
+import { CollabClient } from '@lanemc/client-web';
 import { EditorView, basicSetup } from 'codemirror';
 
 class CollaborativeCodeEditor {
@@ -498,8 +498,8 @@ const server = new CollaborationServer({
 
 ### **Data Persistence** 💾
 ```typescript
-import { CollaborationServer } from '@rtcc/server';
-import { PostgresPersistenceAdapter } from '@rtcc/persistence-postgres';
+import { CollaborationServer } from '@lanemc/server';
+import { PostgresPersistenceAdapter } from '@lanemc/persistence-postgres';
 
 const server = new CollaborationServer({
   port: 3001,
@@ -522,27 +522,27 @@ const server = new CollaborationServer({
 
 ### **Client SDK**
 ```bash
-npm install @rtcc/client-web @rtcc/core
+npm install @lanemc/client-web @lanemc/core
 ```
 
 ### **React Integration**
 ```bash
-npm install @rtcc/react-hooks
+npm install @lanemc/react-hooks
 ```
 
 ### **Server** 
 ```bash
-npm install @rtcc/server
+npm install @lanemc/server
 ```
 
 ### **Quick Server Start**
 ```bash
 # Global installation for quick testing
-npm install -g @rtcc/server
+npm install -g @lanemc/server
 rtcc-server --port 3001
 
 # Or run directly with npx
-npx @rtcc/server --port 3001
+npx @lanemc/server --port 3001
 ```
 
 ---
@@ -633,7 +633,7 @@ npm test
 - 📚 **Documentation**: [rtcc-docs.com](https://rtcc-docs.com) *(coming soon)*
 - 💬 **Discord**: [Join our community](https://discord.gg/rtcc) *(coming soon)*
 - 🐛 **Issues**: [GitHub Issues](https://github.com/yourusername/real-time-collaboration-sdk/issues)
-- 📧 **Email**: support@rtcc.dev *(coming soon)*
+- 📧 **Email**: support@lanemc.dev *(coming soon)*
 
 ---
 
