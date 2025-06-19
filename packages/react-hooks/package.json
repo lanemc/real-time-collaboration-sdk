@@ -1,6 +1,6 @@
 {
   "name": "@thesaasdevkit/react-hooks",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "React hooks and components for real-time collaboration",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -23,8 +23,8 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@thesaasdevkit/core": "^0.1.2",
-    "@thesaasdevkit/client-web": "^0.1.2"
+    "@thesaasdevkit/core": "^0.1.5",
+    "@thesaasdevkit/client-web": "^0.1.5"
   },
   "peerDependencies": {
     "react": ">=16.8.0",
