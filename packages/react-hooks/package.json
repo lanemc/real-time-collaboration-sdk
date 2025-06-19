@@ -47,7 +47,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/real-time-collaboration-sdk.git",
+    "url": "https://github.com/lanemc/real-time-collaboration-sdk.git",
     "directory": "packages/react-hooks"
   },
   "author": "Your Name",
