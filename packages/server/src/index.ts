@@ -20,7 +20,7 @@ export {
   DocumentId,
   ClientId,
   Version,
-} from '@rtcc/core';
+} from '@rtc-sdk/core';
 
 // Version information
 export const VERSION = '0.1.0';

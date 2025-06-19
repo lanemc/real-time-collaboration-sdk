@@ -12,7 +12,7 @@ import {
   SharedList,
   SharedMap,
   generateId 
-} from '@rtcc/core';
+} from '@rtc-sdk/core';
 import { WebSocketTransport } from '../transports/websocket-transport.js';
 import { 
   CollabClientConfig,

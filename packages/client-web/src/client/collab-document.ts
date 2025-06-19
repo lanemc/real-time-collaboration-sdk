@@ -14,7 +14,7 @@ import {
   transformTextOperation,
   transformListOperation,
   transformMapOperation,
-} from '@rtcc/core';
+} from '@rtc-sdk/core';
 import { DocumentSchema, UserPresence } from '../types.js';
 
 /**

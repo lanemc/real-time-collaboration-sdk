@@ -19,5 +19,5 @@ export default {
       tsconfig: './tsconfig.json',
     }),
   ],
-  external: ['react', 'react-dom', '@rtcc/core', '@rtcc/client-web'],
+  external: ['react', 'react-dom', '@rtc-sdk/core', '@rtc-sdk/client-web'],
 };

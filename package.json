@@ -1,6 +1,6 @@
 {
   "name": "real-time-collaboration-sdk",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A comprehensive SDK for adding real-time collaborative editing to web and mobile applications",
   "private": true,
   "workspaces": [

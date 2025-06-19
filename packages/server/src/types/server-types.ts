@@ -3,7 +3,7 @@
  */
 
 import { WebSocket } from 'ws';
-import { Operation, DocumentId, ClientId, Version } from '@rtcc/core';
+import { Operation, DocumentId, ClientId, Version } from '@rtc-sdk/core';
 
 /**
  * Server configuration options

@@ -7,7 +7,7 @@ import { WebSocketServer, WebSocket } from 'ws';
 import express, { Express } from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
-import { EventEmitter, Operation, DocumentId, ClientId, Version } from '@rtcc/core';
+import { EventEmitter, Operation, DocumentId, ClientId, Version } from '@rtc-sdk/core';
 import {
   ServerConfig,
   ServerEvents,

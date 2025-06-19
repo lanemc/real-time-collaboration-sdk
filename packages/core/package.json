@@ -1,6 +1,6 @@
 {
-  "name": "@rtcc/core",
-  "version": "0.1.0",
+  "name": "@rtc-sdk/core",
+  "version": "0.1.1",
   "description": "Core operational transform algorithms and shared data types for RTCC",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",

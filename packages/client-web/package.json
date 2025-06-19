@@ -1,6 +1,6 @@
 {
-  "name": "@rtcc/client-web",
-  "version": "0.1.0",
+  "name": "@rtc-sdk/client-web",
+  "version": "0.1.1",
   "description": "Web client SDK for real-time collaboration",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -23,7 +23,7 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@rtcc/core": "^0.1.0"
+    "@rtc-sdk/core": "^0.1.1"
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "^11.0.0",

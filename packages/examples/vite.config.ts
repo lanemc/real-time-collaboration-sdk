@@ -12,9 +12,9 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@rtcc/core': resolve(__dirname, '../core/src'),
-      '@rtcc/client-web': resolve(__dirname, '../client-web/src'),
-      '@rtcc/server': resolve(__dirname, '../server/src'),
+      '@rtc-sdk/core': resolve(__dirname, '../core/src'),
+      '@rtc-sdk/client-web': resolve(__dirname, '../client-web/src'),
+      '@rtc-sdk/server': resolve(__dirname, '../server/src'),
     },
   },
 });

@@ -2,7 +2,7 @@
  * Message handling service for the collaboration server
  */
 
-import { EventEmitter, Operation, DocumentId, ClientId } from '@rtcc/core';
+import { EventEmitter, Operation, DocumentId, ClientId } from '@rtc-sdk/core';
 import { DocumentManager } from './document-manager.js';
 import { ClientManager } from './client-manager.js';
 import { AuthService } from './auth-service.js';

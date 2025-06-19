@@ -19,5 +19,5 @@ export default {
       tsconfig: './tsconfig.json',
     }),
   ],
-  external: ['@rtcc/core'],
+  external: ['@rtc-sdk/core'],
 };

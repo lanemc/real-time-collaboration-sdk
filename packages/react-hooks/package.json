@@ -1,6 +1,6 @@
 {
-  "name": "@rtcc/react-hooks",
-  "version": "0.1.0",
+  "name": "@rtc-sdk/react-hooks",
+  "version": "0.1.1",
   "description": "React hooks and components for real-time collaboration",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -23,8 +23,8 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@rtcc/core": "^0.1.0",
-    "@rtcc/client-web": "^0.1.0"
+    "@rtc-sdk/core": "^0.1.1",
+    "@rtc-sdk/client-web": "^0.1.1"
   },
   "peerDependencies": {
     "react": ">=16.8.0",

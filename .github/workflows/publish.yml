@@ -26,16 +26,16 @@ jobs:
       - name: Build packages
         run: |
           # Build packages in dependency order
-          echo "Building @rtcc/core..."
+          echo "Building @rtc-sdk/core..."
           cd packages/core && npm run build
           
-          echo "Building @rtcc/client-web..."
+          echo "Building @rtc-sdk/client-web..."
           cd ../client-web && npm run build
           
-          echo "Building @rtcc/server..."
+          echo "Building @rtc-sdk/server..."
           cd ../server && npm run build
           
-          echo "Building @rtcc/react-hooks..."
+          echo "Building @rtc-sdk/react-hooks..."
           cd ../react-hooks && npm run build
         
       - name: Publish to NPM
@@ -46,16 +46,16 @@ jobs:
           echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
           
           # Publish packages in dependency order
-          echo "Publishing @rtcc/core..."
+          echo "Publishing @rtc-sdk/core..."
           cd $GITHUB_WORKSPACE/packages/core && npm publish --access public
           
-          echo "Publishing @rtcc/client-web..."
+          echo "Publishing @rtc-sdk/client-web..."
           cd $GITHUB_WORKSPACE/packages/client-web && npm publish --access public
           
-          echo "Publishing @rtcc/server..."
+          echo "Publishing @rtc-sdk/server..."
           cd $GITHUB_WORKSPACE/packages/server && npm publish --access public
           
-          echo "Publishing @rtcc/react-hooks..."
+          echo "Publishing @rtc-sdk/react-hooks..."
           cd $GITHUB_WORKSPACE/packages/react-hooks && npm publish --access public
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN_SAAS_DEV_KIT }}

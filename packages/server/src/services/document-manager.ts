@@ -2,7 +2,7 @@
  * Document management service for the collaboration server
  */
 
-import { EventEmitter, Operation, DocumentId, ClientId, Version } from '@rtcc/core';
+import { EventEmitter, Operation, DocumentId, ClientId, Version } from '@rtc-sdk/core';
 import { DocumentState, PersistenceAdapter } from '../types/server-types.js';
 
 /**
