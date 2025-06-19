@@ -12,7 +12,7 @@ import {
   SharedList,
   SharedMap,
   generateId 
-} from '@lanemc/core';
+} from '@thesaasdevkit/core';
 import { WebSocketTransport } from '../transports/websocket-transport.js';
 import { 
   CollabClientConfig,

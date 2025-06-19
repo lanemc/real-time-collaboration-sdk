@@ -12,9 +12,9 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@lanemc/core': resolve(__dirname, '../core/src'),
-      '@lanemc/client-web': resolve(__dirname, '../client-web/src'),
-      '@lanemc/server': resolve(__dirname, '../server/src'),
+      '@thesaasdevkit/core': resolve(__dirname, '../core/src'),
+      '@thesaasdevkit/client-web': resolve(__dirname, '../client-web/src'),
+      '@thesaasdevkit/server': resolve(__dirname, '../server/src'),
     },
   },
 });

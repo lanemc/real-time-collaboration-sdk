@@ -19,5 +19,5 @@ export default {
       tsconfig: './tsconfig.json',
     }),
   ],
-  external: ['@lanemc/core'],
+  external: ['@thesaasdevkit/core'],
 };

@@ -2,7 +2,7 @@
  * Client management service for the collaboration server
  */
 
-import { EventEmitter, ClientId, DocumentId } from '@lanemc/core';
+import { EventEmitter, ClientId, DocumentId } from '@thesaasdevkit/core';
 import { ConnectedClient, UserPresence } from '../types/server-types.js';
 
 /**

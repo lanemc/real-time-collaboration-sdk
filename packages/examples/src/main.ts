@@ -3,8 +3,8 @@
  * Demonstrates the Real-Time Collaboration Core SDK
  */
 
-import { CollabClient, ConnectionState, UserPresence } from '@lanemc/client-web';
-import { SharedText } from '@lanemc/core';
+import { CollabClient, ConnectionState, UserPresence } from '@thesaasdevkit/client-web';
+import { SharedText } from '@thesaasdevkit/core';
 
 // Application state
 let client: CollabClient | null = null;

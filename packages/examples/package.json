@@ -1,5 +1,5 @@
 {
-  "name": "@lanemc/examples",
+  "name": "@thesaasdevkit/examples",
   "version": "0.1.4",
   "description": "Example applications using Real-Time Collaboration Core",
   "private": true,
@@ -11,9 +11,9 @@
     "start:server": "node ../server/dist/cli.js --port 3001 --log-level debug"
   },
   "dependencies": {
-    "@lanemc/core": "^0.1.4",
-    "@lanemc/client-web": "^0.1.4",
-    "@lanemc/server": "^0.1.4"
+    "@thesaasdevkit/core": "^0.1.4",
+    "@thesaasdevkit/client-web": "^0.1.4",
+    "@thesaasdevkit/server": "^0.1.4"
   },
   "devDependencies": {
     "vite": "^5.0.0",

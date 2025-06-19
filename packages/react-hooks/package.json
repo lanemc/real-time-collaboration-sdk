@@ -1,5 +1,5 @@
 {
-  "name": "@lanemc/react-hooks",
+  "name": "@thesaasdevkit/react-hooks",
   "version": "0.1.4",
   "description": "React hooks and components for real-time collaboration",
   "main": "dist/index.js",
@@ -23,8 +23,8 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@lanemc/core": "^0.1.2",
-    "@lanemc/client-web": "^0.1.2"
+    "@thesaasdevkit/core": "^0.1.2",
+    "@thesaasdevkit/client-web": "^0.1.2"
   },
   "peerDependencies": {
     "react": ">=16.8.0",

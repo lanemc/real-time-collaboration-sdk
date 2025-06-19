@@ -19,5 +19,5 @@ export default {
       tsconfig: './tsconfig.json',
     }),
   ],
-  external: ['react', 'react-dom', '@lanemc/core', '@lanemc/client-web'],
+  external: ['react', 'react-dom', '@thesaasdevkit/core', '@thesaasdevkit/client-web'],
 };

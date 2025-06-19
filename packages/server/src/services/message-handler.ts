@@ -2,7 +2,7 @@
  * Message handling service for the collaboration server
  */
 
-import { EventEmitter, Operation, DocumentId, ClientId } from '@lanemc/core';
+import { EventEmitter, Operation, DocumentId, ClientId } from '@thesaasdevkit/core';
 import { DocumentManager } from './document-manager.js';
 import { ClientManager } from './client-manager.js';
 import { AuthService } from './auth-service.js';

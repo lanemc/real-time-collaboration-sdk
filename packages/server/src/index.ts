@@ -20,7 +20,7 @@ export {
   DocumentId,
   ClientId,
   Version,
-} from '@lanemc/core';
+} from '@thesaasdevkit/core';
 
 // Version information
 export const VERSION = '0.1.0';

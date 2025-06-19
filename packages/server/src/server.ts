@@ -7,7 +7,7 @@ import { WebSocketServer, WebSocket } from 'ws';
 import express, { Express } from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
-import { EventEmitter, Operation, DocumentId, ClientId, Version } from '@lanemc/core';
+import { EventEmitter, Operation, DocumentId, ClientId, Version } from '@thesaasdevkit/core';
 import {
   ServerConfig,
   ServerEvents,

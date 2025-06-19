@@ -14,7 +14,7 @@ import {
   transformTextOperation,
   transformListOperation,
   transformMapOperation,
-} from '@lanemc/core';
+} from '@thesaasdevkit/core';
 import { DocumentSchema, UserPresence } from '../types.js';
 
 /**

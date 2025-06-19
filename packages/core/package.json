@@ -1,5 +1,5 @@
 {
-  "name": "@lanemc/core",
+  "name": "@thesaasdevkit/core",
   "version": "0.1.4",
   "description": "Core operational transform algorithms and shared data types for RTCC",
   "main": "dist/index.js",
