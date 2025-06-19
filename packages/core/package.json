@@ -1,0 +1,47 @@
+{
+  "name": "@rtcc/core",
+  "version": "0.1.0",
+  "description": "Core operational transform algorithms and shared data types for RTCC",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc && rollup -c",
+    "dev": "tsc --watch",
+    "test": "vitest",
+    "lint": "eslint src --ext .ts,.tsx",
+    "clean": "rm -rf dist"
+  },
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^11.0.0",
+    "rollup": "^4.0.0",
+    "tslib": "^2.6.0"
+  },
+  "dependencies": {},
+  "keywords": [
+    "operational-transform",
+    "ot",
+    "collaboration",
+    "shared-types"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/real-time-collaboration-sdk.git",
+    "directory": "packages/core"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
+}

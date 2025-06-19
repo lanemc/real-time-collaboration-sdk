@@ -1,0 +1,58 @@
+{
+  "name": "@rtcc/react-hooks",
+  "version": "0.1.0",
+  "description": "React hooks and components for real-time collaboration",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc && rollup -c",
+    "dev": "tsc --watch",
+    "test": "vitest",
+    "lint": "eslint src --ext .ts,.tsx",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@rtcc/core": "workspace:*",
+    "@rtcc/client-web": "workspace:*"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^11.0.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "rollup": "^4.0.0",
+    "tslib": "^2.6.0"
+  },
+  "keywords": [
+    "react",
+    "hooks",
+    "collaboration",
+    "realtime"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/real-time-collaboration-sdk.git",
+    "directory": "packages/react-hooks"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
+}

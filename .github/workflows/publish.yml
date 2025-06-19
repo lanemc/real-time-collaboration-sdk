@@ -1,0 +1,43 @@
+name: Publish to NPM
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          registry-url: 'https://registry.npmjs.org'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Build all packages
+        run: npm run build
+        
+      - name: Run tests
+        run: npm run test
+        
+      - name: Run linting
+        run: npm run lint
+        
+      - name: Publish to NPM
+        run: |
+          # Configure npm to use the token
+          echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
+          
+          # Publish all packages that aren't private
+          npm publish --workspaces --access public
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN_SAAS_DEV_KIT }}
