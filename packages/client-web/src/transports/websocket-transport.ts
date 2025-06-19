@@ -23,6 +23,9 @@ export interface WebSocketTransportEvents {
   
   /** Error occurred */
   error: (error: Error) => void;
+  
+  /** Allow additional events */
+  [key: string]: (...args: any[]) => void;
 }
 
 /**

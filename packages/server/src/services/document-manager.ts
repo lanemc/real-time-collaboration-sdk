@@ -23,6 +23,9 @@ export interface DocumentManagerEvents {
   
   /** Client left document */
   clientLeft: (documentId: DocumentId, clientId: ClientId) => void;
+  
+  /** Allow additional events */
+  [key: string]: (...args: any[]) => void;
 }
 
 /**
@@ -50,7 +53,8 @@ export class DocumentManager extends EventEmitter<DocumentManagerEvents> {
     if (!document) {
       // Try to load from persistence
       if (this.persistenceAdapter) {
-        document = await this.persistenceAdapter.loadDocument(documentId);
+        const loaded = await this.persistenceAdapter.loadDocument(documentId);
+        document = loaded || undefined;
       }
       
       // Create new document if not found
@@ -68,8 +72,8 @@ export class DocumentManager extends EventEmitter<DocumentManagerEvents> {
   /**
    * Get a document by ID
    */
-  getDocument(documentId: DocumentId): DocumentState | null {
-    return this.documents.get(documentId) || null;
+  getDocument(documentId: DocumentId): DocumentState | undefined {
+    return this.documents.get(documentId);
   }
 
   /**

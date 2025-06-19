@@ -22,6 +22,7 @@ import {
   MessageType,
   DocumentSchema,
   UserPresence,
+  AuthMessage,
   JoinDocumentMessage,
   OperationMessage,
   PresenceUpdateMessage,
@@ -57,6 +58,7 @@ export class CollabClient extends EventEmitter<CollabClientEvents> {
       headers: {},
       ...config,
       clientId: config.clientId || generateId(),
+      token: config.token || '',
     };
 
     this.clientId = this.config.clientId;
@@ -186,11 +188,14 @@ export class CollabClient extends EventEmitter<CollabClientEvents> {
     if (document) {
       document.leave();
       this.documents.delete(documentId);
-      this.sendMessage({
-        type: MessageType.LEAVE_DOCUMENT,
-        documentId,
-        timestamp: Date.now(),
-      });
+      
+      if (this.isConnected) {
+        this.transport.send({
+          type: MessageType.LEAVE_DOCUMENT,
+          documentId,
+          timestamp: Date.now(),
+        });
+      }
     }
   }
 
@@ -234,7 +239,7 @@ export class CollabClient extends EventEmitter<CollabClientEvents> {
    */
   private async authenticate(): Promise<void> {
     return new Promise((resolve, reject) => {
-      const authMessage = {
+      const authMessage: AuthMessage = {
         type: MessageType.AUTHENTICATE,
         clientId: this.clientId,
         token: this.authToken,

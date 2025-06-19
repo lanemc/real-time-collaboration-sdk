@@ -44,6 +44,9 @@ export interface CollabDocumentEvents<T> {
   
   /** Document left */
   leave: () => void;
+  
+  /** Allow additional events */
+  [key: string]: (...args: any[]) => void;
 }
 
 /**
@@ -407,11 +410,11 @@ export class CollabDocument<T = any> extends EventEmitter<CollabDocumentEvents<T
   private applyOperationToSharedData(operation: Operation): void {
     // Determine which shared data to apply to based on operation type or field
     if (this.sharedData instanceof SharedText && operation.type.startsWith('text-')) {
-      this.sharedData.apply(operation);
+      this.sharedData.apply(operation as any); // TextOperationType
     } else if (this.sharedData instanceof SharedList && operation.type.startsWith('list-')) {
-      this.sharedData.apply(operation);
+      this.sharedData.apply(operation as any); // ListOperationType
     } else if (this.sharedData instanceof SharedMap && operation.type.startsWith('map-')) {
-      this.sharedData.apply(operation);
+      this.sharedData.apply(operation as any); // MapOperationType
     } else if (typeof this.sharedData === 'object' && this.sharedData !== null) {
       // Composite document - operation should specify field
       // For now, assume operation has a field property (would need to extend operation types)
@@ -424,13 +427,23 @@ export class CollabDocument<T = any> extends EventEmitter<CollabDocumentEvents<T
    */
   private transformOperation(operationA: Operation, operationB: Operation): Operation {
     if (operationA.type.startsWith('text-') && operationB.type.startsWith('text-')) {
-      const result = transformTextOperation(operationA as any, operationB as any);
+      // Import types are needed for proper casting
+      const result = transformTextOperation(
+        operationA as any, // TextOperationType
+        operationB as any  // TextOperationType
+      );
       return result.operation;
     } else if (operationA.type.startsWith('list-') && operationB.type.startsWith('list-')) {
-      const result = transformListOperation(operationA as any, operationB as any);
+      const result = transformListOperation(
+        operationA as any, // ListOperationType
+        operationB as any  // ListOperationType
+      );
       return result.operation;
     } else if (operationA.type.startsWith('map-') && operationB.type.startsWith('map-')) {
-      const result = transformMapOperation(operationA as any, operationB as any);
+      const result = transformMapOperation(
+        operationA as any, // MapOperationType
+        operationB as any  // MapOperationType
+      );
       return result.operation;
     }
     
@@ -455,7 +468,7 @@ export class CollabDocument<T = any> extends EventEmitter<CollabDocumentEvents<T
         if (sharedField instanceof SharedText || 
             sharedField instanceof SharedList || 
             sharedField instanceof SharedMap) {
-          sharedField.fromSnapshot({ value: fieldValue, version: this.version });
+          sharedField.fromSnapshot({ value: fieldValue as any, version: this.version });
         }
       }
     }

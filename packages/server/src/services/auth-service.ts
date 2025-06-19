@@ -23,6 +23,9 @@ export interface AuthServiceEvents {
   
   /** Authentication failed */
   authenticationFailed: (clientId: ClientId, reason: string) => void;
+  
+  /** Allow additional events */
+  [key: string]: (...args: any[]) => void;
 }
 
 /**

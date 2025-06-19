@@ -40,6 +40,9 @@ export interface MessageHandlerEvents {
   
   /** Presence updated */
   presenceUpdated: (documentId: DocumentId, presence: UserPresence, client: ConnectedClient) => void;
+  
+  /** Allow additional events */
+  [key: string]: (...args: any[]) => void;
 }
 
 /**

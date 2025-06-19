@@ -153,6 +153,32 @@ export interface PresenceUpdateMessage extends BaseMessage {
 }
 
 /**
+ * Leave document message
+ */
+export interface LeaveDocumentMessage extends BaseMessage {
+  type: MessageType.LEAVE_DOCUMENT;
+  documentId: DocumentId;
+}
+
+/**
+ * User join message
+ */
+export interface UserJoinMessage extends BaseMessage {
+  type: MessageType.USER_JOIN;
+  documentId: DocumentId;
+  user: UserPresence;
+}
+
+/**
+ * User leave message
+ */
+export interface UserLeaveMessage extends BaseMessage {
+  type: MessageType.USER_LEAVE;
+  documentId: DocumentId;
+  user: UserPresence;
+}
+
+/**
  * Error message
  */
 export interface ErrorMessage extends BaseMessage {
@@ -168,10 +194,13 @@ export interface ErrorMessage extends BaseMessage {
 export type Message = 
   | AuthMessage
   | JoinDocumentMessage
+  | LeaveDocumentMessage
   | DocumentStateMessage
   | OperationMessage
   | OperationAckMessage
   | PresenceUpdateMessage
+  | UserJoinMessage
+  | UserLeaveMessage
   | ErrorMessage;
 
 /**
@@ -211,4 +240,7 @@ export interface CollabClientEvents {
   
   /** Presence updated */
   presenceUpdate: (documentId: DocumentId, presence: UserPresence) => void;
+  
+  /** Allow additional events */
+  [key: string]: (...args: any[]) => void;
 }

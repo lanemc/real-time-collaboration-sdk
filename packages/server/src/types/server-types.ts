@@ -262,4 +262,7 @@ export interface ServerEvents {
   
   /** Error occurred */
   error: (error: Error, client?: ConnectedClient) => void;
+  
+  /** Allow additional events */
+  [key: string]: (...args: any[]) => void;
 }

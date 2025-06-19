@@ -17,6 +17,9 @@ export interface ClientManagerEvents {
   
   /** Client updated */
   clientUpdated: (client: ConnectedClient) => void;
+  
+  /** Allow additional events */
+  [key: string]: (...args: any[]) => void;
 }
 
 /**

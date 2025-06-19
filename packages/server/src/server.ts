@@ -153,7 +153,7 @@ export class CollaborationServer extends EventEmitter<ServerEvents> {
    * Get document information
    */
   getDocumentInfo(documentId: DocumentId): DocumentState | null {
-    return this.documentManager.getDocument(documentId);
+    return this.documentManager.getDocument(documentId) || null;
   }
 
   /**
@@ -246,7 +246,9 @@ export class CollaborationServer extends EventEmitter<ServerEvents> {
 
       // Set up WebSocket event handlers
       ws.on('message', async (data) => {
-        await this.handleClientMessage(client, data);
+        // Convert RawData to Buffer
+        const buffer = Buffer.isBuffer(data) ? data : Buffer.from(data.toString());
+        await this.handleClientMessage(client, buffer);
       });
 
       ws.on('close', (code, reason) => {
@@ -420,11 +422,14 @@ export class CollaborationServer extends EventEmitter<ServerEvents> {
     const configLevel = this.config.logging?.level || 'info';
     
     if (levels.indexOf(level) <= levels.indexOf(configLevel)) {
-      console[level as keyof Console](
-        `[${new Date().toISOString()}] [${level.toUpperCase()}]`,
-        message,
-        ...args
-      );
+      const logMethod = console[level as 'error' | 'warn' | 'info' | 'debug'];
+      if (logMethod) {
+        logMethod.call(console,
+          `[${new Date().toISOString()}] [${level.toUpperCase()}]`,
+          message,
+          ...args
+        );
+      }
     }
   }
 }
